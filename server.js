@@ -18,4 +18,4 @@ app.use(express.static('public'));
  app.use(bodyparser.urlencoded({extended:false}));
 
 //Laitetaan palvelin kuuntelemaan porttia 8080
-const server = app.listen(8080, function(){})
+const server = app.listen(8080, function(){});
