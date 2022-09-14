@@ -1,0 +1,20 @@
+{
+  "name": "palvelinesimerkki",
+  "version": "1.0.0",
+  "description": "Palvelinohjelmoinnin esimerkkisovellus",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kulmalammikko/palvelinesimerkki.git"
+  },
+  "author": "Mikko Kulmala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kulmalammikko/palvelinesimerkki/issues"
+  },
+  "homepage": "https://github.com/kulmalammikko/palvelinesimerkki#readme"
+}
