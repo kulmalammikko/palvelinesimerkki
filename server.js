@@ -60,7 +60,7 @@ app.post('/deleteBook', function (req, res) {
     //Poistetaan collectionista kirja
     db.collection('books').deleteOne( { _id: new mongodb.ObjectId(req.body._id)}, function( err, result){
         if ( err ) {
-            res.send('Error deleting with floowing data: ' + err);
+            res.send('Error deleting with following data: ' + err);
         } else {
             res.send('Book is deleted with following id: ' + req.body._id);
         }

@@ -1,0 +1,247 @@
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+body {
+    font-family: Arial, Verdana, sans-serif;
+	background-color: #A7BEAE;
+}
+
+header {
+    float: left;
+    width: 100%;
+    border: 1px solid black;
+	background-color: #B85042;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+	border-radius: 10px;
+
+}
+
+header img {
+    float: center;
+	width: 40%;
+	position: relative;
+	box-shadow: 4px 4px 4px 4px silver;
+
+}
+
+header h1 {
+    font-size: 3vw;
+	font-family: Copperplate, Papyrus, fantasy;
+
+}
+
+nav {
+	border-radius: 10px;
+	background-color: #A7BEAE;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 2em;
+	padding-bottom: 2em;
+    color: #B85042;
+	background-color:#B85042;
+    bottom: 0;
+	border-radius: 10px;
+}
+
+hr {
+    border: 1px solid #D4342D;
+    margin: 20px 0;
+    clear: both;
+}
+
+table, th, td {
+    border: 1px solid #3179B2;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 1em;
+}
+
+a {
+    color: black;
+    text-decoration: none; /* Hävittää linkeistä alleviivauksen */
+}
+
+p, body {
+    color: #000000;
+	padding-bottom: 5px;
+	line-height: 200%;
+}
+h1, h2, h3{
+    color: #000000;
+	text-align: center;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1em;
+}
+
+img.link {
+	float: center;
+	height: 70.5px;
+	width: auto;
+	position: relative;
+	padding: 0px;
+	vertical-align: bottom;
+	background-color: #E7E8D1;
+	border-radius: 10px;
+	border: 5px solid black;
+	box-shadow: 4px 4px 4px 4px #E7E8D1;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Näillä rakennetaan kolme saraketta vierekkäin*/
+.column {
+  float: left;
+  padding: 16px;  
+  border-radius: 10px;
+  flex = 1;
+  box-shadow: 4px 4px 4px 4px #E7E8D1;
+  
+}
+
+.row {
+	display: flex;
+}
+	
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column:nth-child(1){
+   background-color:#B85042;
+   border: 1px solid black;
+   width: 20%;
+   margin: 10px;
+}
+.column:nth-child(2){
+   background-color:#E7E8D1;
+   border: 1px solid black;
+   width: 40%;
+   margin: 10px;
+}
+.column:nth-child(3){
+   background-color:#A7BEAE;
+   border: 1px solid black;
+   width: 40%;
+   margin: 10px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    width: 100%;
+  }
+.row {
+	display: block;
+}
+}
+
+/* Näillä rakennetaan navigointi-osio, jossa linkki kaikkiin kursseihin erikseen. */
+ul {
+
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E7E8D1;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+li {
+  float: left;
+  padding: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+li a {
+  display: block;
+  color: #000;
+  background-color: #A7BEAE;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #3179B2;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.active {
+  background-color: #A7BEAE;
+  color: white;
+}
+
+
+/* Tehdään navigointiosioon dropdown-lista kursseista. */
+.dropbtn {
+  background-color: #E7E8D1;
+  color: black;
+  padding: 16px;
+  font-size: 24px;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  box-shadow: 4px 4px 4px 4px #E7E8D1;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #A7BEAE;
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid black;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #A7BEAE;}
+
