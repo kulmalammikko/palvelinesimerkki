@@ -6,7 +6,7 @@ const bookSchema = mongoose.Schema;
 //Muokkaa tämä osion harjoitustyössä oman tietorakenteen mukaan
 let book = new bookSchema ( {
     title: {
-    type: String
+       type: String
     },
     author: {
       type: String
