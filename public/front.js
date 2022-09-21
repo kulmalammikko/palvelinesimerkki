@@ -6,12 +6,15 @@ function readBook(){
 
     xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-    const books = JSON.parse(xmlhttp.responseText); //Huom! Palauttaa hakasulkeet JSONin ympärillä, slice poistaa ensimmäisen ja viimeisen merkin. Toimii yhdellä tiedolla, ei kahdella.
+    const books = JSON.parse(xmlhttp.responseText); 
      // Luodaan taulukko, jossa käyttäjät näytetään
      let table = document.createElement('table');
      // Silmukka kirjojen läpikäymiseen
      for (let i = 0; i < books.length; i++) {
+      // Luo taulukkorivin
       let newRow = document.createElement('tr');
+      // Luo solut title, author ja publisher-kentille
+      // Käyttää funktiota createCell
       newRow.appendChild(createCell(books[i].title));
       newRow.appendChild(createCell(books[i].author));
       newRow.appendChild(createCell(books[i].publisher));
@@ -51,7 +54,7 @@ function createForm(book, action) {
   // lisätään kirjan nimi
   input = document.createElement('input');
   input.value = book.title;
-  input.type = 'hidden'
+  input.type = 'hidden' //palataan
   input.name = 'title'
   form.appendChild(input);
   // lisätään kirjoittajan nimi

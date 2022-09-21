@@ -22,7 +22,7 @@ app.use(bodyparser.urlencoded({extended:false}));
 
 //Muodostetaan tietokantayhteys
 // Luo vakio connectionstringille
-const uri = 'mongodb+srv://demokko:XC9W0iI5IXSslY10@cluster0.sotfj2v.mongodb.net/bookDb?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://demokko:RAYTYfNnSu8rfuHo@cluster0.sotfj2v.mongodb.net/bookDb?retryWrites=true&w=majority'
 // Muodostetaan yhteys tietokantaan
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser:true})
 
