@@ -139,15 +139,20 @@ img.link {
 .column:nth-child(2){
    background-color:#E7E8D1;
    border: 1px solid black;
-   width: 40%;
+   width: 60%;
    margin: 10px;
 }
 .column:nth-child(3){
    background-color:#A7BEAE;
    border: 1px solid black;
-   width: 40%;
+   width: 20%;
    margin: 10px;
 }
+
+#demo {
+  width: auto;
+}
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {

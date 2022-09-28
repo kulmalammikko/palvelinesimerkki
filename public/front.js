@@ -7,7 +7,7 @@ function readBook(){
     xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
     const books = JSON.parse(xmlhttp.responseText); 
-     // Luodaan taulukko, jossa käyttäjät näytetään
+     // Luodaan taulukko, jossa kirjat näytetään
      let table = document.createElement('table');
      // Silmukka kirjojen läpikäymiseen
      for (let i = 0; i < books.length; i++) {
@@ -54,7 +54,7 @@ function createForm(book, action) {
   // lisätään kirjan nimi
   input = document.createElement('input');
   input.value = book.title;
-  input.type = 'hidden' //palataan
+  input.type = 'hidden' 
   input.name = 'title'
   form.appendChild(input);
   // lisätään kirjoittajan nimi
@@ -72,7 +72,7 @@ function createForm(book, action) {
   // Lisää painike
   input = document.createElement('input');
   input.type = 'submit';
-  input.value = (action == 'delete') ? 'Delete book' : 'Update user';
+  input.value = (action == 'delete') ? 'Delete' : 'Update';
   form.appendChild(input)
   newCell.appendChild(form);
   return newCell;
